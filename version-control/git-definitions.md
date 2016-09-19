@@ -3,7 +3,7 @@
 **Instructions: ** Define each of the following Git concepts.
 
 * What is version control?  Why is it useful?
-	Version control is Git. It is useful because through this method of managing changes to files you and your team can: keep track of changes made to code, track who made those changes, and branches become employable so as not to mess up the master code through experimentation and trial.
+	Version control is Git. It is useful because through this method of managing changes to files you and your team can then: keep track of changes made to code, track who made those changes, and branches become employable so as not to mess up the master code through experimentation and trial.
 
 * What is a branch and why would you use one?
 	It is literally a branch off of the master code. It is an exact copy of code that one can experiment and mess with, without altering the original code.
