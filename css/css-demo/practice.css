@@ -10,6 +10,6 @@
 .list {
 	font-size: .8em;
 }
-p::first-letter {
-	font-color: white;
+ul>li {
+	color: blue;
 }
