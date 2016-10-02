@@ -33,15 +33,33 @@ figcaption {
 }
 
 body {
-  width: 960px;
+  max-width: 960px;
 }
 
 #external-links {
   position: relative;
   left: 250px;
   top: 250px;
-  width: 200px;
+  width: 20%;
   display: inline-block;
   vertical-align: top;
   float: right;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
 }
