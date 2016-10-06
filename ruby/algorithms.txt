@@ -1,0 +1,14 @@
+How to use an elevator:
+- Enter elevator.
+- Decide what floor you would like the elevator to take you to.
+- Press the number corresponding to the number of the floor you would like to go to.
+- Wait until the elevator reaches the floor you wanted to go to.
+- Exit elevator.
+
+How to brush teeth:
+- Put adequate amount of toothpaste on the end of toothbrush.
+- Run toothpaste on the end of toothbrush under water from sink.
+- Put end of toothbrush with toothpaste on it in mouth.
+- Rub your teeth with brush and toothpaste for two minutes or until all teeth have been rubbed 5x.
+- Spit out foam/toothpaste.
+- Wash mouth out with water.
