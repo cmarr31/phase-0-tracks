@@ -1,6 +1,8 @@
 puts "What is your name?"
 name = gets.chomp
-if name == "Drake Cula" || "Tu Fang"
+if name == "Drake Cula"
+	name = false
+elsif name == "Tu Fang"
 	name = false
 else
 	name = true
@@ -35,16 +37,17 @@ else
 	insurance = false
 end
 
-
-if age_year && (garlic_bread || insurance)
-	result = "Probably not a vampire."
-elsif
-	!age_year && (!garlic_bread || !insurance)
+message = case
+when !name
+	 result = "Definitely a vampire."
+when age_year && (garlic_bread || insurance)
+	 result = "Probably not a vampire."
+when !age_year && !garlic_bread && !insurance
+	 result = "Almost certainly a vampire."
+when !age_year && (!garlic_bread || !insurance)
 	result = "Probably a vampire."
-elsif
-	!age_year && !garlic_bread && !insurance
-	result = "Almost certainly a vampire."
-elsif 
+else
+	result = "Results inconclusive."
+end
 
-	
-	
+puts result
