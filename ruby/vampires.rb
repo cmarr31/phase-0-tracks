@@ -60,6 +60,17 @@ begin
 		result = "Definitely a vampire."
 	end
 	
+	begin
+		puts "List any allergies. Type 'done' when finished."
+		allergy = gets.chomp
+	end until allergy == "sunshine" || allergy == "done"
+	
+	if allergy == "sunshine"
+		result = "Probably a vampire."
+	end
+	
 	puts result	
 	times +=1
 end while times < Integer(employees)
+
+puts "Actually nevermind! What do these questions have to do with anything? Let's all be friends."
