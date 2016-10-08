@@ -14,8 +14,6 @@ def encrypt(str)
 	end until index == str.length
 end
 
-word = "chris"
-encrypt(word)
 
 # ----------------------------------------------------------
 
@@ -38,8 +36,25 @@ def decrypt(str)
 	end until first == str.length
 end
 
-word = "chris"
-decrypt(word)
-
 # -----------------------------------------------------------
+
+# Ask agent whether they would like to encrypt or decrypt their password.
+# Ask agent for password.
+# Conduct requested operation & prints results to the screen.
+
+begin
+	puts "Would you like to encrypt/decrypt your password? (e/d)"
+	crypt = gets.chomp
+	
+	puts "Enter password."
+	pass = gets.chomp
+	
+	if crypt == "e"
+		p encrypt(pass)
+	elsif crypt == "d" 
+		p decrypt(pass)
+	else
+		puts "I didn't understand that."
+	end
+end until crypt == ("e" || "d")
 
