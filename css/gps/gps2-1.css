@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: tahoma
+  
+}
+
+p {
+  font-family: arial;
+  background-color: lightgray;
+}
+
+
+.column-1 {
+  background-color: lightblue;
+  display:inline-block;
+  width: 45%;
+  vertical-align: text-top;
+  padding: 5px;
+  border: solid black;
+  height: 75%;
+}
+
+.column-2 {
+  background-color: lightblue;
+  display:inline-block;
+  width: 45%;
+  vertical-align: text-top;
+  padding: 5px;
+  border: solid black;
+  height: 1002px;
+}
+
+header {
+  border: solid black;
+  background-color: teal;
+  width: 90%;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+footer {
+  border: solid black;
+  background-color: teal;
+  padding: 5px;
+  width: 90%;
+  margin-top: 5px;
+}
