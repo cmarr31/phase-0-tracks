@@ -56,5 +56,5 @@ begin
 	else
 		puts "I didn't understand that."
 	end
-end until crypt == ("e" || "d")
+end until crypt == ("e") || ("d")
 
