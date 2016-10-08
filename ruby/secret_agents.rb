@@ -15,7 +15,7 @@ def encrypt(str)
 end
 
 word = "chris"
-p encrypt(word)
+encrypt(word)
 
 # ----------------------------------------------------------
 
@@ -39,7 +39,7 @@ def decrypt(str)
 end
 
 word = "chris"
-p encrypt(word)
+decrypt(word)
 
 # -----------------------------------------------------------
 
