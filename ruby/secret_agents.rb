@@ -14,6 +14,9 @@ def encrypt(str)
 	end until index == str.length
 end
 
+word = "chris"
+p encrypt(word)
+
 # ----------------------------------------------------------
 
 # 'decrypt' method pseudocode
@@ -23,6 +26,20 @@ end
 ## Write a method that will:
 ## Break the given string down into individual letters by using the string's index.
 ## Move it one letter back by finding the letter in the alphabet's index, then taking the number of the letter right before that letter.
+
+def decrypt(str)
+	first = 0
+	alph = "abcdefghijklmnopqrstuvwxyz"
+	begin
+		str[first]
+		x = alph.index(str[first]) - 1
+		p alph[x]
+		first +=1
+	end until first == str.length
+end
+
+word = "chris"
+p encrypt(word)
 
 # -----------------------------------------------------------
 
