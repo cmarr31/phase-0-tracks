@@ -9,4 +9,4 @@ app_data = {
 }
 
 app_data[:hair_color] = "brown"
-app_data[:hired] = "yes"
+app_data[:hired] = "yes" 
