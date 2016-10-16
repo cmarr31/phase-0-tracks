@@ -1,8 +1,3 @@
-
-
-
-
-
 living_organisms = {
 	plants: {
 		forest: [
@@ -10,27 +5,27 @@ living_organisms = {
 			'wildflowers',
 			'ferns',
 			'mosses'
-		]
+		],
 		marine: [
 			'algae',
 			'kelp',
 			'seaweed'
-		]
+		],
 		desert: [
 			'tumbleweed',
 			'cacti',
 		]
-	}
+	},
 	animals: {
 		forest: [
 			'birds',
 			'foxes',
 			'deer'
-		]
+		],
 		marine: [
 			'sharks',
 			'coral'
-		]
+		],
 		desert: [
 			'camels',
 			'snakes',
@@ -38,3 +33,9 @@ living_organisms = {
 		]
 	}
 }
+
+# Wildflowers
+p living_organisms [:plants][:forest][1]
+
+# Sharks
+p living_organisms [:animals][:marine][0]
