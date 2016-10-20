@@ -35,3 +35,10 @@ class Puppy
 	end
 end
 Shiba.dog_years(13)
+
+class Puppy
+	def sit
+		puts "*sits down*"
+	end
+end
+Shiba.sit
