@@ -28,3 +28,10 @@ class Puppy
 end
 Shiba.roll_over
 
+class Puppy
+	def dog_years(integer)
+		result = integer * 7
+		return result
+	end
+end
+Shiba.dog_years(13)
