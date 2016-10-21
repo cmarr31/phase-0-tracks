@@ -49,3 +49,59 @@ class Puppy
 	end
 end
 Shiba.sit
+
+#----------------------------------------------------------
+
+class One
+	def meditate
+		puts "*sits down and meditates*"
+	end
+end
+
+class One
+	def initialize
+		puts "Initializing new instance of One..."
+	end
+end
+
+Chris = One.new
+Chris.meditate
+
+class One
+	def chant
+		puts "*begins chanting 'Nam-Myoho-Renge-Kyo'*"
+	end
+end
+Chris.chant
+
+array1 = ["Shiba"]
+array2 = []
+
+def instances(arr1, arr2)
+	num = 0 
+	begin
+		arr2 << arr1.map.with_index{|x| x + num.to_s }.join(",")
+		num +=1
+	end until num == 50
+end
+
+
+instances(array1, array2)
+array2.each {|x| x = One.new }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
