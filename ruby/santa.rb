@@ -18,3 +18,8 @@ class Santa
 		puts "Initializing santa instance..."
 	end
 end
+
+Chris = Santa.new 
+Chris.speak
+Chris.eats_milk_and_cookies("snickerdoodle")
+
