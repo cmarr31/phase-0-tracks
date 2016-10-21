@@ -7,7 +7,14 @@ class Puppy
 
 end
 
-Shiba = Puppy.new
+class Puppy
+	def initialize
+		p "Initializing new puppy instance..."
+	end
+end
+
+Shiba = Puppy.new 
+
 Shiba.fetch("ball")
 
 class Puppy
