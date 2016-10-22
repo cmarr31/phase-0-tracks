@@ -2,8 +2,8 @@ class Santa
 end
 
 class Santa
-	attr_accessor :name, :gender
-	attr_reader :age, :ethnicity
+	attr_accessor :name, :gender, :age
+	attr_reader :ethnicity
 
 	def initialize(name, gender, ethnicity)
 		puts "Initializing santa instance..."
@@ -14,7 +14,7 @@ class Santa
 			"Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
 	end
-	
+
 	def speak
 		puts "Ho! Ho! Ho! Haaaappy holidays!"
 	end
@@ -38,7 +38,25 @@ class Santa
 end
 
 santas = []
-santas << Santa.new("Chris", "male", "Caucasian")
-santas << Santa.new("John", "male", "Unicorn")
-santas << Santa.new("Kelly", "female", "Asian")
-santas << Santa.new("Sam", "transgender", "Hispanic")
+Chris = Santa.new("Chris", "male", "Caucasian")
+John = Santa.new("John", "male", "Unicorn")
+Kelly = Santa.new("Kelly", "female", "Asian")
+Sam = Santa.new("Sam", "transgender", "Hispanic")
+santas << Chris
+santas << John
+santas << Kelly
+santas << Sam
+
+p Chris.celebrate_birthday
+p John.get_mad_at("Cupid")
+p Kelly.speak
+p Sam.eats_milk_and_cookies("snickerdoodle")
+
+auto_santas = []
+auto_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+auto_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+auto_names = ["Bill", "Ted", "Stacy", "Peter", "Kyle", "Philip", "Manny"]
+auto_genders.length.times do |i|
+  auto_santas << Santa.new(auto_names.sample(1)[i], auto_genders.sample(1)[i], auto_ethnicities.sample(1)[i])
+end
+p auto_santas
