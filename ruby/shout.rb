@@ -6,3 +6,6 @@ module Shout
 		words + "!!!" + ":]"
 	end
 end
+
+Shout.yell_angrily
+Shout.yelling_happily
