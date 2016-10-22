@@ -11,27 +11,24 @@ class Santa
 			"Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
 	end
-	#getters:
-	def name
-		@name
+	
+	def celebrate_birthday
+		@age +=1
 	end
-	def gender
-		@gender
+	def get_mad_at(name)
+		@reindeer_ranking.insert(8, @reindeer_ranking.delete(name))
 	end
-	def ethnicity
-		@ethnicity
-	end
-	#setters:
-	def name=(new_name)
-		@name = new_name
-	end
-	def gender=(new_gender)
+	def change_gender(new_gender)
 		@gender = new_gender
 	end
-	def ethnicity=(new_ethnicity)
-		@ethnicity = new_ethnicity
+	def age
+		return @age
+	end
+	def ethnicity
+		return @ethnicity
 	end
 end
+
 
 class Santa
 	def speak
