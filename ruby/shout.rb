@@ -26,3 +26,9 @@ end
 class Athlete
 	include Shout
 end
+
+Ted = Monkey.new
+Joe = Athlete.new
+
+p Ted.yelling_happily("OOOOH AH OOOH AH")
+p Joe.yell_angrily("I broke my toe! OOOOH AH OOOH AH")
