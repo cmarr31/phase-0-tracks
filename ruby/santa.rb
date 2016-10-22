@@ -11,6 +11,26 @@ class Santa
 			"Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
 	end
+	#getters:
+	def name
+		@name
+	end
+	def gender
+		@gender
+	end
+	def ethnicity
+		@ethnicity
+	end
+	#setters:
+	def name=(new_name)
+		@name = new_name
+	end
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+	def ethnicity=(new_ethnicity)
+		@ethnicity = new_ethnicity
+	end
 end
 
 class Santa
