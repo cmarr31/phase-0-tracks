@@ -7,5 +7,5 @@ module Shout
 	end
 end
 
-Shout.yell_angrily
-Shout.yelling_happily
+p Shout.yell_angrily("Dude")
+p Shout.yelling_happily("Dude")
