@@ -10,3 +10,9 @@ until word1.length == 0 || @guess_count == word1.length do
 	guess1 = gets.chomp
 	game.try(guess1)
 end
+
+if word1.length == 0
+	puts "Congratulations you're a winner!!! Keep on winning ;)"
+else
+	puts "Just add this to the (I'm assuming) your already long list of miserable failures :'("
+end
