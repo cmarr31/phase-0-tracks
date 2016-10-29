@@ -4,26 +4,30 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
+# Require_relative is when you're linking to a file in the same directory.
 #
 require_relative 'state_data'
 
 class VirusPredictor
 
+
+# Passing in the values from state_data.rb into the initialize method and assigning insance variables to those values.
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+# Calling two other instance methods within class. Passing in the instance variables we assigned in the previous method.
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
   private
 
-  def predicted_deaths(population_density, population, state)
+# This is a private method. Estimates how many people will die in a given state during a virus outbreak. Takes 3 arguments.
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -41,7 +45,8 @@ class VirusPredictor
 
   end
 
-  def speed_of_spread(population_density, state) #in months
+# This is a private method. Estimates how fast the virus will spread. Takes two arguments.
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -69,19 +74,24 @@ end
 # DRIVER CODE
  # initialize VirusPredictor for each state
 
+STATE_DATA.each do |state, population|
+  state = VirusPredictor.new(state, STATE_DATA[state][:population_density], STATE_DATA[state][:population])
+  state.virus_effects
+end
 
-alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
-alabama.virus_effects
-
-jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
-jersey.virus_effects
-
-california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
-california.virus_effects
-
-alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
-alaska.virus_effects
 
 
 #=======================================================================
 # Reflection Section
+
+# One syntax denotes the keys with a colon, while the other denotes them with a rocket.
+# Require_relative is when you're linking to a file in the same directory. Require can be linked to anywhere.
+# Different ways to iterate through a hash are: '.each' & '.map'.
+# It surprised me that we didnt need arguments at all.
+# The concept I most solidified in this session was: accessibility of instance variables.
+
+
+
+
+
+
