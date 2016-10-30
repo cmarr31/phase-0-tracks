@@ -13,8 +13,6 @@ console.log(horses);
 
 // --------------------------------
 
-var car = {name: 'Agnis', age: 4, reliable: true};
-
 function Car(name, age, reliable) {
 	this.name = name;
 	this.age = age;
@@ -25,3 +23,11 @@ function Car(name, age, reliable) {
 	};
 }
 
+var my_car = new Car("Agnis", 4, true);
+console.log(my_car);
+console.log("I can drive my car...");
+my_car.drive();
+
+var someone_elses_car = new Car("Beth", 1, true);
+console.log("I shouldnt, but I can drive someone else's car!");
+someone_elses_car.drive();
