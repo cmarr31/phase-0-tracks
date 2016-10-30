@@ -4,10 +4,24 @@
 // 2) Put those integers in a separate array.
 // 3) Print the word in the original array that is at the same index
 //     as the highest number in the second array.
+// ** Use "example string".length **
 
 
-function Words(arr) {
-	this.longest = function() {
+var array1 = ["thought", "inclination", "tree", "apple"];
+var array2 = [];
+var names = ["Joe", "Katherine", "Sally", "Li"];
 
+function longest(arr) {
+	for (var i = 0; i < arr.length; i++) {
+		array2.push(arr[i].length);
+		var biggest = array2[0];
+		if(array2[i] > biggest) {
+        	biggest = array2[i];
+        	console.log(arr[array2.indexOf(biggest)]);
+		} else {
+			null	
+		}
 	}
 }
+longest(array1);
+longest(names);
