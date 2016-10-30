@@ -6,7 +6,6 @@
 //     as the highest number in the second array.
 // ** Use "example string".length **
 
-
 var array1 = ["thought", "inclination", "tree", "apple"];
 var array2 = [];
 var names = ["Joe", "Katherine", "Sally", "Li"];
