@@ -4,6 +4,8 @@
 // Print each letter of the string starting with the highest index
 // working my way to the lowest index.
 
+example = "abcde"
+
 function reverse(str) {
 	console.log(str.charAt(str.length - 1));
 	console.log(str.charAt(str.length - 2));
@@ -11,4 +13,11 @@ function reverse(str) {
 	console.log(str.charAt(str.length - 4));
 	console.log(str.charAt(str.length - 5));
 }
-reverse("abcde");
+reverse(example);
+
+var x = true;
+if (x) {
+	console.log(example);
+} else {
+	console.log("Not sure what you want.");
+}
