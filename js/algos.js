@@ -4,26 +4,25 @@
 // 2) Put those integers in a separate array.
 // 3) Print the word in the original array that is at the same index
 //     as the highest number in the second array.
-// ** Use "example string".length **
+// ** Use "example string".length *
+var array1 = ["thought", "inclination", "tree", "apple"];
+var array2 = [];
+var names = ["Joe", "Katherine", "Sally", "Li"];
 
-//var array1 = ["thought", "inclination", "tree", "apple"];
-//var array2 = [];
-//var names = ["Joe", "Katherine", "Sally", "Li"];
-//
-//function longest(arr) {
-//	for (var i = 0; i < arr.length; i++) {
-//		array2.push(arr[i].length);
-//		var biggest = array2[0];
-//		if(array2[i] > biggest) {
-//        	biggest = array2[i];
-//        	console.log(arr[array2.indexOf(biggest)]);
-//		} else {
-//			null	
-//		}
-//	}
-//}
-//longest(array1);
-//longest(names);
+function longest(arr) {
+	for (var i = 0; i < arr.length; i++) {
+		array2.push(arr[i].length);
+		var biggest = array2[0];
+		if(array2[i] > biggest) {
+        	biggest = array2[i];
+        	console.log(arr[array2.indexOf(biggest)]);
+		} else {
+			null	
+		}
+	}
+}
+longest(array1);
+longest(names);
 
 // ------------------------------------------------
 
@@ -59,37 +58,13 @@ similar(employee1, employee2);
 // ------------------------------------------------
 
 
-//function generate(integer) {
-//	var gen1 = []
-//}
-
-//import java.until.Random;
-//
-//class apples{
-//	public static void main(String[] args) {
-//		Random dice = new Random();
-//		int number;
-//		for(int counter = 1; counter <= 10; counter++) {
-//			number = 1 + dice.nextInt(6);
-//			system.out.printIn(number + " ");
-//		}
-//	}
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function generate(integer) {
+	array3 = []
+	for (var i = 0; i < integer; i++) {
+		var randomstring = require("randomstring");
+		array1.push(randomstring.generate(i * 3));
+	}
+	console.log(array3);
+}
+generate(3);
 
