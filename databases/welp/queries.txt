@@ -1,0 +1,9 @@
+welp :> sqlite3 welp.db
+SQLite version 3.14.0 2016-07-26 15:17:14
+Enter ".help" for usage hints.
+sqlite> SELECT businesses.name, reviews.comment, users.first_name FROM businesses JOIN users ON businesses.id = users.id FROM users JOIN reviews ON users.id = reviews.user_id;
+Error: near "FROM": syntax error
+sqlite> SELECT businesses.name, reviews.comment, users.first_name FROM businesses LEFT JOIN users ON businesses.id = users.id LEFT JOIN reviews ON reviews.user_id = users.id;
+Amir's Towing|Not a restaurant|Bradford
+Lotus Yoga|Very Balancing|Angela
+Sushi World|Fresh|Holly
