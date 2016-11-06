@@ -1,0 +1,83 @@
+solo_project :> sqlite3 solo_project
+SQLite version 3.14.0 2016-07-26 15:17:14
+Enter ".help" for usage hints.
+sqlite> CREATE TABLE groups_of_people (
+   ...> id INTEGER PRIMARY KEY,
+   ...> place VARCHAR(255),
+   ...> num_of_friends INT,
+   ...> );
+Error: near ")": syntax error
+sqlite> CREATE TABLE groups_of_people (
+   ...> id INTEGER PRIMARY KEY,
+   ...> place VARCHAR(255),
+   ...> num_of_friends INT
+   ...> );
+sqlite> DROP TABLE groups_of_people;
+sqlite> CREATE TABLE groups_of_people (
+   ...> id INTEGER PRIMARY KEY,
+   ...> place VARCHAR(255),
+   ...> num_of_friends INT,
+   ...> FOREIGN KEY (place) REFERENCES friends(name)
+   ...> );
+sqlite> CREATE TABLE friends (
+   ...> id INTEGER PRIMARY KEY,
+   ...> name VARCHAR(255)
+   ...> );
+sqlite> SELECT * FROM groups_of_people, friends WHERE groups_of_people.place = friends.name;
+sqlite> DROP TABLE groups_of_people;
+sqlite> DROP TABLE friends;
+sqlite> CREATE TABLE groups_of_people (
+   ...> id INTEGER PRIMARY KEY,
+   ...> place VARCHAR(255),
+   ...> num_of_friends INT,
+   ...> FOREIGN KEY (id) REFERENCES friends(place_id)
+   ...> );
+sqlite> CREATE TABLE friends (
+   ...> id INTEGER PRIMARY KEY,
+   ...> name VARCHAR(255),
+   ...> place_id INT
+   ...> );
+sqlite> SELECT * FROM groups_of_people, friends WHERE groups_of_people.id = friends.place_id;
+sqlite> INSERT INTO groups_of_people (place, num_of_friends) VALUES ("School", 2);
+sqlite> INSERT INTO groups_of_people (place, num_of_friends) VALUES ("Church", 1);
+sqlite> INSERT INTO groups_of_people (place, num_of_friends) VALUES ("Friends", 1);
+sqlite> INSERT INTO friends (name, place_id) VALUES ("Joe", 1);
+sqlite> INSERT INTO friends (name, place_id) VALUES ("Bob", 3);
+sqlite> INSERT INTO friends (name, place_id) VALUES ("Ryan", 2);
+sqlite> INSERT INTO friends (name, place_id) VALUES ("Phil", 1);
+sqlite> SELECT * FROM groups_of_people, friends WHERE groups_of_people.id = friends.place_id;
+1|School|2|1|Joe|1
+3|Friends|1|2|Bob|3
+2|Church|1|3|Ryan|2
+1|School|2|4|Phil|1
+sqlite> SELECT groups_of_people.place, friends.name FROM groups_of_people JOIN friends ON groups_of_people.id = friends.place_id;
+School|Joe
+Friends|Bob
+Church|Ryan
+School|Phil
+sqlite> UPDATE groups_of_people SET place="Other" WHERE id=3;
+sqlite> SELECT * FROM groups_of_people;
+1|School|2
+2|Church|1
+3|Other|1
+sqlite> ALTER TABLE groups_of_people DROP num_of_friends INT;
+Error: near "DROP": syntax error
+sqlite> ALTER TABLE groups_of_people DROP COLUMN num_of_friends;
+Error: near "DROP": syntax error
+sqlite> ALTER TABLE groups_of_people
+   ...> DROP COLUMN num_of_friends;
+Error: near "DROP": syntax error
+sqlite> DELETE FROM groups_of_people
+   ...> Wh;
+Error: near "Wh": syntax error
+sqlite> DELETE FROM friends
+   ...> WHERE name="Ryan";
+sqlite> SELECT * FROM friends;
+1|Joe|1
+2|Bob|3
+4|Phil|1
+sqlite> SELECT groups_of_people.place, friends.name FROM groups_of_people JOIN friends ON groups_of_people.id = friends.place_id;
+School|Joe
+Other|Bob
+School|Phil
+sqlite> .exit
