@@ -38,10 +38,10 @@ initial_response = gets.chomp
 
 if initial_response == "add"	
 	puts "Please type the quote:"		
-	quote1 = gets.chomp		
+	quote = gets.chomp		
 	puts "Please type the name of the person who said this:"		
-	name1 = gets.chomp		
-	add_quote(db, quote1, name1)
+	name = gets.chomp		
+	add_quote(db, quote, name)
 elsif initial_response == "edit"
 	puts "Please type the ID # of the quote you'd like to revise:"
 	id1 = gets.chomp
