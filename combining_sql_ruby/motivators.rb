@@ -24,12 +24,15 @@ def add_quote(db, quote, name)
 end
 
 def edit_quote(db, revised_quote, id1)
-	db.execute("UPDATE motivators SET quote=revised_quote WHERE id=id1")
+	db.execute("UPDATE motivators SET quote=#{revised_quote} WHERE id=#{id1}")
 end
 
 def delete_quote(db, id2)
-	db.execute("DELETE FROM motivators WHERE id=id2")
+	db.execute("DELETE FROM motivators WHERE id=#{id2}")
 end
+
+#add_quote(db, "Be the change you wish to see in the world", "Ghandi")
+#add_quote(db, "Life is completely dependant on perspective", "The Buddha")
 
 puts "Welcome to your personal Automated Self-Motivator(TM)!!!"
 
