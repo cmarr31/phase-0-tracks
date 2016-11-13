@@ -1,0 +1,31 @@
+#OG {
+	padding: 25px;
+	border: 5px solid black;
+	background-image: url(http://img3.themebin.com/1920x1080/rolling_waves_mod.jpg);
+	color: gray;
+	width: 750px;
+	font-family: Helvetica;
+}
+
+.margin {
+	margin-left: 10px;
+}
+
+footer {
+	text-align: center;
+}
+
+.third_eye {
+	height: 311px;
+	width: 311px;
+}
+
+a {
+	color: green;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+}
