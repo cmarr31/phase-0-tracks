@@ -4,10 +4,14 @@
 	<title>Add Pet Name and Age</title>
 </head>
 <body>
-	<form>
-		<input type="text" name="name" placeholder="Name">
-		<input type="integer" name="age" placeholder="Age">
-		<button type="submit">Save</button>
-	</form>
+	<h1>Add Pet Name and Age</h1>
+	<p>Click <a href="pets/new">here</a>to add a pet to the list.</p>
+	<ul>
+		<% @pets.each do |pet| %>
+			<li>
+				<%= pet['name'] %>, <%= pet['age'] %>
+			</li>
+		<% end %>
+	</ul>
 </body>
 </html>
