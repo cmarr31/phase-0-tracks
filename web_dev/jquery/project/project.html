@@ -4,14 +4,20 @@
 	<title></title>
 </head>
 <body>
-	<div id="wrapper">
-		<div id="jsonData"></div>
-			<script type="text/javascript">
-				$("document").ready(function() {
-	
-				}); <!--End of JQuery Code -->
-			</script>
-		</div>
-	</div>	
+	<div id="fadeExp1">
+    	<img src="AllWeNeedIsLove.jpg" width="100px" height="100px" />
+		<script type="text/javascript">
+		$(document).ready(function () {
+		    $("#fadeExp1 img").fadeTo(0, 0.3);
+		
+		    $("#fadeExp1 img").hover(function () {
+		        $(this).fadeTo("slow", 1.0);
+		        },
+		        function () {$(this).fadeTo("slow", 0.3);
+		        }
+		    );
+		});
+		</script>
+	</div>
 </body>
 </html>
