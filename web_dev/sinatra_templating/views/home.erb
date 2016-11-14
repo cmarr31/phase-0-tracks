@@ -1,16 +1,17 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Student Management System</title>
-  <link rel="stylesheet" href="styles.css">
+	<title>Add Pet Name and Age</title>
 </head>
 <body>
-  <h1>Student Management System</h1>
-  <p>Welcome to the student management system.</p>
-  <p>Click <a href="students/new">here</a> to create a new student.</p>
-  <ul>
-    <% @students.each do |student| %>
-      <li><%= student['name'] %>, <%= student['age'] %></li>
-    <% end %>
-  </ul>
+	<h1>Add Pet Name and Age</h1>
+	<p>Click <a href="pets/new">here</a>to add a pet to the list.</p>
+	<ul>
+		<% @pets.each do |pet| %>
+			<li>
+				<%= pet['name'] %>, <%= pet['age'] %>
+			</li>
+		<% end %>
+	</ul>
 </body>
 </html>
