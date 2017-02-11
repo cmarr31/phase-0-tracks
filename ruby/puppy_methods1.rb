@@ -29,12 +29,88 @@ class Puppy
 		p human_years * 7
 	end	
 
+  def initialize
+  end
+
 end
 
 shiba = Puppy.new 
 shiba.speak(5)
 
 shiba.dog_years(14)
+
+
+# In puppy_methods.rb, design and implement your own class below the 
+# Puppy class -- anything you'd like, but it should have an initialize 
+# method and at least two other instance methods. Then do the following:
+# 
+# Use a loop to make 50 instances of your class.
+# Modify your loop so that it stores all of the instances in a data 
+# structure.
+# Iterate over that data structure using .each and call the instance 
+# methods you wrote on each instance. So if you wrote a Gymnast class, 
+# this is where you'd call .flip and .jump on each of your instances of 
+# Gymnast.
+# If the steps above feel really unfamiliar, remember that you've been 
+# working with classes the entire time -- strings are instances of the 
+# String class. So you can start by using string instances in place of 
+# your own class instances, if that helps you visualize how the code
+# should come together.
+
+class Animals
+	def initialize
+	end
+
+	def yell
+		puts "ROAR!"
+	end
+
+end	
+
+animal_arry = []
+
+index = 0
+while index < 50
+	new_animal = Animals.new
+	animal_arry << new_animal
+	index += 1 
+end
+
+p animal_arry
+
+ObjectSpace.each_object(Animals) do |obj|
+  new_animal.yell
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
